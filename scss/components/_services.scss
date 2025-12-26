@@ -1,0 +1,48 @@
+@use '../abstracts/variables' as v;
+@use 'sass:color';
+
+/* ====================================
+   Servicios
+==================================== */
+
+.hero-servicios {
+  min-height: 70vh;
+  background: linear-gradient(
+    135deg,
+    v.$secondary-color 0%,
+    color.adjust(v.$secondary-color, $lightness: -15%) 100%
+  );
+  position: relative;
+}
+
+.servicio-item {
+  padding: 2rem;
+  border-radius: 1rem;
+  background: white;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.4s ease;
+
+  &:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(v.$primary-color, 0.15);
+  }
+
+  .icono-servicio i {
+    opacity: 0.8;
+    transition: all 0.3s ease;
+  }
+
+  &:hover .icono-servicio i {
+    transform: scale(1.15);
+    opacity: 1;
+  }
+}
+
+/* ===============================
+   CTA – Servicios
+================================ */
+
+.cta {
+  background-color: v.$primary-color;
+  text-align: center;
+}

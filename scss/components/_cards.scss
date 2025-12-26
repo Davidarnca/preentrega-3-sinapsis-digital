@@ -1,0 +1,28 @@
+@use '../abstracts/variables' as v;
+
+/* ====================================
+   Cards hover
+==================================== */
+
+.card {
+  transition: all 0.4s ease;
+  border-radius: 1rem;
+  overflow: hidden;
+
+  &:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 20px 40px rgba(v.$primary-color, 0.2);
+  }
+
+  .card-body {
+    i {
+      transition: all 0.3s ease;
+    }
+  }
+
+  &:hover {
+    .card-body i {
+      transform: scale(1.2);
+    }
+  }
+}

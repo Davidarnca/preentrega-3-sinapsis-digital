@@ -1,0 +1,29 @@
+@use '../abstracts/variables';
+
+/* ====================================
+   Navbar
+==================================== */
+
+.navbar {
+  background: transparent;
+  transition: all 0.3s ease;
+
+  &.scrolled {
+    background: variables.$secondary-color;
+  }
+
+  .navbar-brand {
+    color: white;
+    font-weight: 700;
+  }
+
+  .nav-link {
+    color: white;
+    transition: color 0.3s ease;
+
+    &:hover,
+    &.active {
+      color: variables.$primary-color;
+    }
+  }
+}

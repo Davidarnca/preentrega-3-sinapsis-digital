@@ -1,0 +1,58 @@
+@use '../abstracts/variables' as v;
+@use 'sass:color';
+
+/* ====================================
+   Portfolio
+==================================== */
+
+.hero-portfolio {
+  min-height: 60vh;
+  background: linear-gradient(
+    135deg,
+    v.$secondary-color 0%,
+    color.adjust(v.$secondary-color, $lightness: -15%) 100%
+  );
+}
+
+.portfolio-item {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s ease;
+
+  img {
+    transition: all 0.4s ease;
+  }
+
+  &:hover img {
+    transform: scale(1.1);
+  }
+
+  .portfolio-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      45deg,
+      rgba(v.$primary-color, 0.9),
+      rgba(192, 132, 252, 0.8)
+    );
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: all 0.4s ease;
+  }
+
+  &:hover .portfolio-overlay {
+    opacity: 1;
+  }
+
+  .overlay-content {
+    transform: translateY(20px);
+    transition: all 0.4s ease;
+  }
+
+  &:hover .overlay-content {
+    transform: translateY(0);
+  }
+}

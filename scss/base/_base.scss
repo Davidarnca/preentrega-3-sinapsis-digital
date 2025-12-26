@@ -1,0 +1,15 @@
+@use '../abstracts/variables';
+
+/* ===============================
+   Base styles
+================================ */
+
+body {
+  font-family: variables.$font-primary;
+  background-color: variables.$background-color;
+  color: variables.$secondary-color;  
+}
+
+h1, h2, h3 {
+  color: variables.$primary-color;
+}

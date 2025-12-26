@@ -1,0 +1,35 @@
+@use '../abstracts/variables';
+@use 'sass:color';
+
+/* ====================================
+   Hero
+==================================== */
+
+.hero {
+  min-height: 100vh;
+  background: linear-gradient(
+    135deg,
+    variables.$secondary-color 0%,
+    darken(variables.$primary-color, 20%) 100%
+  );
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url('../assets/pattern.svg') center / cover;
+    opacity: 0.08;
+  }
+
+  .text-highlight {
+    color: variables.$primary-color;
+  }
+
+  .hero-img {
+    max-width: 90%;
+    filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.3));
+    animation: float 6s ease-in-out infinite;
+  }
+}
