@@ -1,4 +1,4 @@
-@use '../abstracts/variables';
+@use '../abstracts/variables' as v;
 
 /* ====================================
    Navbar
@@ -9,7 +9,7 @@
   transition: all 0.3s ease;
 
   &.scrolled {
-    background: variables.$secondary-color;
+    background: v.$secondary-color;
   }
 
   .navbar-brand {
@@ -23,7 +23,7 @@
 
     &:hover,
     &.active {
-      color: variables.$primary-color;
+      color: v.$primary-color;
     }
   }
 }
