@@ -1,4 +1,4 @@
-@use '../abstracts/variables';
+@use '../abstracts/variables' as v;
 @use 'sass:color';
 
 /* ====================================
@@ -8,10 +8,10 @@
 .hero {
   min-height: 100vh;
   background: linear-gradient(
-    135deg,
-    variables.$secondary-color 0%,
-    darken(variables.$primary-color, 20%) 100%
-  );
+  135deg,
+  v.$primary-color 0%,
+  color.adjust(v.$primary-color, $lightness: -20%) 100%
+);
   position: relative;
   overflow: hidden;
 
@@ -24,8 +24,8 @@
   }
 
   .text-highlight {
-    color: variables.$primary-color;
-  }
+  color: v.$primary-color;
+}
 
   .hero-img {
     max-width: 90%;

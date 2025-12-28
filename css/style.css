@@ -47,7 +47,7 @@ h1, h2, h3 {
 ==================================== */
 .hero {
   min-height: 100vh;
-  background: linear-gradient(135deg, #111111 0%, rgb(14.5384615385, 0, 252) 100%);
+  background: linear-gradient(135deg, #6c63ff 0%, rgb(14.5384615385, 0, 252) 100%);
   position: relative;
   overflow: hidden;
 }
