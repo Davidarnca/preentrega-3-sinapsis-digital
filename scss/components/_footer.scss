@@ -1,0 +1,32 @@
+footer {
+  background-color: #212529; // bg-dark de Bootstrap
+  color: #ffffff;
+  padding: 3rem 0;
+
+  h5 {
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    margin: 0;
+    font-size: 0.9rem;
+    opacity: 0.8;
+  }
+
+  a {
+    color: #ffffff;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: #0d6efd; // primary bootstrap
+    }
+  }
+
+  .text-md-end {
+    a {
+      margin-left: 1rem;
+    }
+  }
+}
