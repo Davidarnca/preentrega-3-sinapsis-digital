@@ -7,6 +7,16 @@
 .navbar {
   background: transparent;
   transition: all 0.3s ease;
+  z-index: 1000;
+
+  .navbar-collapse {
+    @media (max-width: 991px) {
+      background-color: rgba(0, 0, 0, 0.95);
+      padding: 1rem;
+      margin-top: 0.5rem;
+      border-radius: 0.5rem;
+    }
+  }
 
   &.scrolled {
     background: v.$secondary-color;
@@ -24,6 +34,18 @@
     &:hover,
     &.active {
       color: v.$primary-color;
+    }
+
+    @media (max-width: 991px) {
+      color: #ffffff;
+      padding: 0.75rem 0;
+      font-size: 1.1rem;
+    }
+  }
+
+  .navbar-nav {
+    @media (max-width: 991px) {
+      align-items: flex-start;
     }
   }
 }

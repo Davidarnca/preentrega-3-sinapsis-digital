@@ -26,6 +26,15 @@ h1, h2, h3 {
 .navbar {
   background: transparent;
   transition: all 0.3s ease;
+  z-index: 1000;
+}
+@media (max-width: 991px) {
+  .navbar .navbar-collapse {
+    background-color: rgba(0, 0, 0, 0.95);
+    padding: 1rem;
+    margin-top: 0.5rem;
+    border-radius: 0.5rem;
+  }
 }
 .navbar.scrolled {
   background: #111111;
@@ -40,6 +49,18 @@ h1, h2, h3 {
 }
 .navbar .nav-link:hover, .navbar .nav-link.active {
   color: #6c63ff;
+}
+@media (max-width: 991px) {
+  .navbar .nav-link {
+    color: #ffffff;
+    padding: 0.75rem 0;
+    font-size: 1.1rem;
+  }
+}
+@media (max-width: 991px) {
+  .navbar .navbar-nav {
+    align-items: flex-start;
+  }
 }
 
 /* ====================================
