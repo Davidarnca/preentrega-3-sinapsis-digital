@@ -3,7 +3,7 @@
 Proyecto desarrollado como parte del curso **Desarrollo Web** en Coderhouse.
 
 ## 🌐 Demo
-👉 https://davidardna.github.io/preentrega-3-sinapsis-digital/
+👉 https://davidarnca.github.io/preentrega-3-sinapsis-digital/
 
 ## 📌 Descripción
 Sitio web institucional para **Sinapsis Digital**, enfocado en servicios digitales, diseño web y soluciones tecnológicas.
