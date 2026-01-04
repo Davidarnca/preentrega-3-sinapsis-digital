@@ -30,9 +30,14 @@ h1, h2, h3 {
 }
 @media (max-width: 991px) {
   .navbar .navbar-collapse {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    width: 100%;
     background-color: rgba(0, 0, 0, 0.95);
-    padding: 1rem;
-    margin-top: 0.5rem;
+    padding: 1.5rem;
+    margin-top: 0.5 rem;
     border-radius: 0.5rem;
   }
 }
@@ -62,6 +67,12 @@ h1, h2, h3 {
     align-items: flex-start;
   }
 }
+.navbar .navbar-toggler {
+  border: none;
+}
+.navbar .navbar-toggler:focus {
+  box-shadow: none;
+}
 
 /* ====================================
    Hero
@@ -80,7 +91,8 @@ h1, h2, h3 {
   opacity: 0.08;
 }
 .hero .text-highlight {
-  color: #6c63ff;
+  color: #FFD700;
+  font-weight: 600;
 }
 .hero .hero-img {
   max-width: 90%;
@@ -88,6 +100,44 @@ h1, h2, h3 {
   animation: float 6s ease-in-out infinite;
 }
 
+@media (max-width: 768px) {
+  .hero {
+    min-height: auto;
+    padding: 6rem 0 4rem;
+  }
+  .hero .col-lg-6:first-child {
+    text-align: center;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  .hero h1 {
+    font-size: 2.5rem;
+    line-height: 1.2;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+  .hero .text-highlight {
+    display: inline;
+    white-space: normal;
+  }
+  .hero p {
+    font-size: 1.1rem;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  .hero .btn {
+    display: block;
+    margin: 1.5rem auto 0;
+    width: 100%;
+    max-width: 280px;
+  }
+  .hero .hero-img {
+    max-width: 100%;
+    margin-top: 2rem;
+  }
+}
 /* ====================================
    Cards hover
 ==================================== */
@@ -226,6 +276,14 @@ footer .text-md-end a {
   margin-left: 1rem;
 }
 
+@media (max-width: 768px) {
+  footer {
+    text-align: center;
+  }
+  footer .row {
+    gap: 1.5rem;
+  }
+}
 /* ====================================
    Portfolio
 ==================================== */
