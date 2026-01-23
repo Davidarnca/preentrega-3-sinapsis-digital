@@ -23,6 +23,7 @@
 
   .text-highlight {
     color: v.$hero-highlight-color;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     font-weight: 600;
   }
 
