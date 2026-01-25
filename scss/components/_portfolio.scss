@@ -1,9 +1,19 @@
 @use '../abstracts/variables' as v;
 @use 'sass:color';
 
-/* ====================================
+/* =========================
+   Reset anti-desborde iOS
+========================= */
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* =========================
    Portfolio
-==================================== */
+========================= */
 
 .hero-portfolio {
   min-height: 60vh;
@@ -14,17 +24,21 @@
   );
 }
 
+/* Contenedor seguro */
+.portfolio-grid {
+  overflow-x: hidden;
+}
+
+/* Tarjeta */
 .portfolio-item {
   position: relative;
   overflow: hidden;
-  transition: all 0.4s ease;
+  will-change: transform;
 
   img {
-    transition: all 0.4s ease;
-  }
-
-  &:hover img {
-    transform: scale(1.1);
+    width: 100%;
+    display: block;
+    transition: transform 0.4s ease;
   }
 
   .portfolio-overlay {
@@ -40,7 +54,7 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    transition: all 0.4s ease;
+    transition: opacity 0.4s ease;
   }
 
   &:hover .portfolio-overlay {
@@ -49,10 +63,19 @@
 
   .overlay-content {
     transform: translateY(20px);
-    transition: all 0.4s ease;
+    transition: transform 0.4s ease;
   }
 
   &:hover .overlay-content {
     transform: translateY(0);
+  }
+}
+
+/* =========================
+   Hover SOLO desktop real
+========================= */
+@media (hover: hover) and (pointer: fine) {
+  .portfolio-item:hover img {
+    transform: scale(1.08);
   }
 }
